@@ -13,13 +13,14 @@ import br.armando.ecommerce.repository.UsuarioRepository;
 @Service
 public class UsuarioService {
 	@Autowired
-	private UsuarioRepository usuarioRepository;
+	private final UsuarioRepository usuarioRepository;
 	@Autowired
-	private CarrinhoRepository carrinhoRepository;
+	private final CarrinhoRepository carrinhoRepository;
 
-//	public UsuarioService(UsuarioRepository usuarioRepository,CarrinhoRepository carrinhoRepository) {
-//		this.usuarioRepository = usuarioRepository;
-//		this.carrinhoRepository = carrinhoRepository;
+	public UsuarioService(UsuarioRepository usuarioRepository,CarrinhoRepository carrinhoRepository) {
+		this.usuarioRepository = usuarioRepository;
+		this.carrinhoRepository = carrinhoRepository;
+	}
 
 	@Transactional
 	public Usuario cadastrarUsuario(Usuario usuario) {
