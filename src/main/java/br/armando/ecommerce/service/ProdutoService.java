@@ -32,6 +32,4 @@ public class ProdutoService {
 		return produtoDeletado;
 	}
 
-	// Outros metodos relacionados a produtos
-
 }
